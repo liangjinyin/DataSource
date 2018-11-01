@@ -58,6 +58,8 @@ public class DataConfiguration {
     public SqlSessionFactory localSqlSessionFactory() throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dynamicDataSource());
+//        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mybatis/mapper/*/*.xml"));
+//        bean.setConfigLocation(new ClassPathResource("/mybatis/mybatis-config.xml"));
         return bean.getObject();
     }
 
